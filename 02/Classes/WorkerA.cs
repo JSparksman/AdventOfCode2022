@@ -5,7 +5,6 @@ namespace _02.Classes;
 public class WorkerA
 {
     private int _score = 0;
-
     public int Score => _score;
 
     public WorkerA(string fileName)
@@ -13,7 +12,7 @@ public class WorkerA
         ParseFile(fileName);
     }
 
-    public static void SolveSample()
+    public static void SolveSamplePartA()
     {
         var worker = new WorkerA("Sample.txt");
         Console.WriteLine(worker.Score);
@@ -24,7 +23,7 @@ public class WorkerA
         var worker = new WorkerA("Input.txt");
         Console.WriteLine(worker.Score);
     }
-
+    
     private void ParseFile(string fileName)
     {
         var rawData = File.ReadAllLines(fileName);

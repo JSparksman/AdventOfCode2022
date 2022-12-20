@@ -2,34 +2,34 @@ namespace _02.Data;
 
 public static class ScoreMap
 {
-    public const int Win = 6;
-    public const int Draw = 3;
-    public const int Lose = 0;
+    public const int WinScore = 6;
+    public const int DrawScore = 3;
+    public const int LoseScore = 0;
     
     public static Dictionary<string, Dictionary<string, int>> ResultScores = new Dictionary<string, Dictionary<string, int>>
     {
         {
             TheirShape.Rock, new Dictionary<string, int>
             {
-                {YourShape.Rock, Draw},
-                {YourShape.Scissors, Lose},
-                {YourShape.Paper, Win}
+                {YourShape.Rock, DrawScore},
+                {YourShape.Scissors, LoseScore},
+                {YourShape.Paper, WinScore}
             }
         },
         {
             TheirShape.Scissors, new Dictionary<string, int>
             {
-                {YourShape.Rock, Win},
-                {YourShape.Scissors, Draw},
-                {YourShape.Paper, Lose}
+                {YourShape.Rock, WinScore},
+                {YourShape.Scissors, DrawScore},
+                {YourShape.Paper, LoseScore}
             }
         },
         {
             TheirShape.Paper, new Dictionary<string, int>
             {
-                {YourShape.Rock, Lose},
-                {YourShape.Scissors, Win},
-                {YourShape.Paper, Draw}
+                {YourShape.Rock, LoseScore},
+                {YourShape.Scissors, WinScore},
+                {YourShape.Paper, DrawScore}
             }
         }
     };
